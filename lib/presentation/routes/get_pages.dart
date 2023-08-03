@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 import 'package:module_app/presentation/pages/pages.dart';
-import 'package:module_app/presentation/bindings/bindings.dart';
-import 'package:module_app/presentation/middlewares/middlewares.dart';
 import 'routes.dart';
 
 class GetPages {
@@ -11,20 +9,16 @@ class GetPages {
     GetPage(
       name: Routes.ROOT,
       page: () => const RootPage(),
-      binding: RootBinding(),
-      middlewares: [SessionMiddleware()],
     ),
 
-    // auth
+    // other
     GetPage(
-      name: Routes.LOGIN,
-      page: () => const LoginPage(),
-      binding: LoginBinding(),
+      name: "/second",
+      page: () => const SecondPage(),
     ),
     GetPage(
-      name: Routes.REGISTER,
-      page: () => const RegisterPage(),
-      binding: RegisterBinding(),
+      name: "/third",
+      page: () => const ThirdPage(),
     ),
   ];
 

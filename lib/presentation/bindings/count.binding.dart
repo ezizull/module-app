@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class RootBinding extends Bindings {
+class CountBinding extends Bindings {
   @override
   void dependencies() {}
 }

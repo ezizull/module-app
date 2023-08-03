@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class NotFoundPage extends StatelessWidget {
-  const NotFoundPage({super.key});
+class ThirdPage extends StatelessWidget {
+  const ThirdPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +13,14 @@ class NotFoundPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("welcome".tr, style: const TextStyle(fontSize: 30)),
-            Text("page_notfound".tr, style: const TextStyle(fontSize: 30)),
+            const Text("Third Page", style: TextStyle(fontSize: 30)),
+            SizedBox(
+              width: 120,
+              child: ElevatedButton(
+                onPressed: () => Get.back(),
+                child: const Text("Get.back"),
+              ),
+            ),
           ],
         ),
       ),
