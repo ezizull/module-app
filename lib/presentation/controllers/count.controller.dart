@@ -6,7 +6,7 @@ class CountController extends GetxController {
   Future<CountController> init() async {
     const duration = Duration(seconds: 5);
 
-    Future.delayed(duration, () => ++count.value);
+    Future.delayed(duration, () => count.value++);
     print("CountController:: Future init ${count.value}");
 
     return this;
@@ -15,26 +15,27 @@ class CountController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    ++count.value;
+    count.value++;
     print("CountController:: onInit ${count.value}");
   }
 
   @override
   void onReady() {
     super.onReady();
-    ++count.value;
+    count.value++;
     print("CountController:: onReady ${count.value}");
   }
 
   @override
   void onClose() {
     super.onClose();
-    --count.value;
+    count.value--;
     print("CountController:: onClose ${count.value}");
   }
 
   void increment() {
     count.value++;
     print("CountController:: increment ${count.value}");
+    update();
   }
 }

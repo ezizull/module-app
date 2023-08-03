@@ -1,6 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:module_app/presentation/pages/second/second.dart';
+import 'package:module_app/presentation/pages/pages.dart';
 
 class RootPage extends StatelessWidget {
   const RootPage({super.key});
@@ -18,7 +20,7 @@ class RootPage extends StatelessWidget {
             SizedBox(
               width: 120,
               child: ElevatedButton(
-                onPressed: () => Get.to(const SecondPage()),
+                onPressed: () => Get.to(SecondPage()),
                 child: const Text("Get.to"),
               ),
             ),

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:module_app/presentation/pages/pages.dart';
+import 'package:module_app/presentation/controllers/controllers.dart';
 
-class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+class ThirdPage extends StatelessWidget {
+  ThirdPage({super.key});
+
+  final leazyPut = Get.lazyPut(() => CountController());
+  final controller = CountController();
 
   @override
   Widget build(BuildContext context) {
@@ -15,19 +18,18 @@ class SecondPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("Second Page", style: TextStyle(fontSize: 30)),
-            SizedBox(
-              width: 120,
-              child: ElevatedButton(
-                onPressed: () => Get.off(const ThirdPage()),
-                child: const Text("Get.off"),
+            const Text("Third Page", style: TextStyle(fontSize: 30)),
+            Obx(
+              () => Text(
+                "${controller.count.obs}",
+                style: const TextStyle(fontSize: 30),
               ),
             ),
             SizedBox(
               width: 120,
               child: ElevatedButton(
-                onPressed: () => Get.offAll(const ThirdPage()),
-                child: const Text("Get.offAll"),
+                onPressed: () => controller.increment(),
+                child: const Text("increment"),
               ),
             ),
             SizedBox(

@@ -34,11 +34,11 @@ class Main extends StatelessWidget {
         // other
         GetPage(
           name: "/second",
-          page: () => const SecondPage(),
+          page: () => SecondPage(),
         ),
         GetPage(
           name: "/third",
-          page: () => const ThirdPage(),
+          page: () => ThirdPage(),
         ),
       ],
       theme: ThemeData.light(),
