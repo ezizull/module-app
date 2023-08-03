@@ -31,6 +31,13 @@ class RootPage extends StatelessWidget {
                 child: const Text("Get.lazyPut"),
               ),
             ),
+            SizedBox(
+              width: 120,
+              child: ElevatedButton(
+                onPressed: () => Get.to(FourthPage()),
+                child: const Text("Get.putAsync"),
+              ),
+            ),
           ],
         ),
       ),

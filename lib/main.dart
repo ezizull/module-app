@@ -40,6 +40,10 @@ class Main extends StatelessWidget {
           name: "/third",
           page: () => ThirdPage(),
         ),
+        GetPage(
+          name: "/fourth",
+          page: () => FourthPage(),
+        ),
       ],
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
