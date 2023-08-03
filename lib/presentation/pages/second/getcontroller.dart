@@ -16,7 +16,7 @@ class SecondPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("Second Page", style: TextStyle(fontSize: 30)),
+            const Text("Get.put Page", style: TextStyle(fontSize: 30)),
             Obx(
               () => Text(
                 "${controller.count.obs}",

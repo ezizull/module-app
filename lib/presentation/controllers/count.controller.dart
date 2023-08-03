@@ -6,8 +6,11 @@ class CountController extends GetxController {
   Future<CountController> init() async {
     const duration = Duration(seconds: 5);
 
-    Future.delayed(duration, () => count.value++);
-    print("CountController:: Future init ${count.value}");
+    Future.delayed(duration, () {
+      count.value++;
+      print("CountController:: Future init ${count.value}");
+      return;
+    });
 
     return this;
   }

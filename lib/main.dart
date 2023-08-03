@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:module_app/presentation/pages/pages.dart';
+import 'package:module_app/presentation/services/services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Get.putAsync(() => StorageService().init());
 
   runApp(const Main());
 }
@@ -28,7 +31,7 @@ class Main extends StatelessWidget {
         // root
         GetPage(
           name: "/",
-          page: () => const RootPage(),
+          page: () => RootPage(),
         ),
 
         // other
@@ -42,7 +45,7 @@ class Main extends StatelessWidget {
         ),
         GetPage(
           name: "/fourth",
-          page: () => FourthPage(),
+          page: () => const FourthPage(),
         ),
       ],
       theme: ThemeData.light(),

@@ -33,7 +33,7 @@ class _FourthPageState extends State<FourthPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("Fourth Page", style: TextStyle(fontSize: 30)),
+            const Text("Get.putAsync Page", style: TextStyle(fontSize: 30)),
             Obx(
               () => Text(
                 "${controller.count.obs}",

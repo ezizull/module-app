@@ -18,7 +18,7 @@ class ThirdPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text("Third Page", style: TextStyle(fontSize: 30)),
+            const Text("Get.lazyPut Page", style: TextStyle(fontSize: 30)),
             Obx(
               () => Text(
                 "${controller.count.obs}",
