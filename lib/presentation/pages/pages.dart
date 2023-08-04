@@ -5,7 +5,7 @@
 
 // getcontroller
 // export 'root/getcontroller.dart';
-export 'second/getcontroller.dart';
+// export 'second/getcontroller.dart';
 export 'third/getcontroller.dart';
 export 'fourth/getcontroller.dart';
 
@@ -14,6 +14,7 @@ export 'fourth/getcontroller.dart';
 
 // getmiddleware
 export 'root/getmiddleware.dart';
+export 'second/getmiddleware.dart';
 
 // other
 export 'notfound/notfound.dart';
