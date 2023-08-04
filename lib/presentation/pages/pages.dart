@@ -19,8 +19,11 @@ export 'second/getmiddleware.dart';
 // getview
 // export 'root/getview.dart';
 
+// getx
+// export 'root/getx.dart';
+
 // getbuilder
-export 'root/getx.dart';
+export 'root/getbuilder.dart';
 
 // other
 export 'notfound/notfound.dart';
