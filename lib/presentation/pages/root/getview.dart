@@ -19,11 +19,9 @@ class RootPage extends GetView<ViewController> {
               "Root Page",
               style: TextStyle(fontSize: 30),
             ),
-            Obx(
-              () => Text(
-                "${controller.service.message.value.capitalize}",
-                style: const TextStyle(fontSize: 30),
-              ),
+            Text(
+              "${controller.service.message.obs}",
+              style: const TextStyle(fontSize: 30),
             ),
             Container(
               margin: const EdgeInsets.only(top: 10),

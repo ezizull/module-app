@@ -24,10 +24,12 @@ class StorageService extends GetxService {
   }
 
   readStorage(String key) {
+    print("StorageService:: readStorage");
     return storage.read(key);
   }
 
   writeStorage(String key, dynamic value) {
+    print("StorageService:: writeStorage $key $value");
     return storage.write(key, value);
   }
 }
