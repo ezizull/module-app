@@ -35,7 +35,8 @@ class Main extends StatelessWidget {
         // root
         GetPage(
           name: "/",
-          page: () => RootPage(),
+          page: () => const RootPage(),
+          binding: ViewBinding(),
         ),
 
         // other

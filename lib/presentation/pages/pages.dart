@@ -13,8 +13,11 @@ export 'fourth/getcontroller.dart';
 // export 'root/getservice.dart';
 
 // getmiddleware
-export 'root/getmiddleware.dart';
+// export 'root/getmiddleware.dart';
 export 'second/getmiddleware.dart';
+
+// getview
+export 'root/getview.dart';
 
 // other
 export 'notfound/notfound.dart';
