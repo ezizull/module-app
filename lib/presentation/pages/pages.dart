@@ -10,7 +10,10 @@ export 'third/getcontroller.dart';
 export 'fourth/getcontroller.dart';
 
 // getservice
-export 'root/getservice.dart';
+// export 'root/getservice.dart';
+
+// getmiddleware
+export 'root/getmiddleware.dart';
 
 // other
 export 'notfound/notfound.dart';

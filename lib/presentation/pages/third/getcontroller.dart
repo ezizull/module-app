@@ -6,8 +6,7 @@ import 'package:module_app/presentation/controllers/controllers.dart';
 class ThirdPage extends StatelessWidget {
   ThirdPage({super.key});
 
-  final leazyPut = Get.lazyPut(() => CountController());
-  final controller = CountController();
+  final controller = Get.find<LazyCountController>();
 
   @override
   Widget build(BuildContext context) {

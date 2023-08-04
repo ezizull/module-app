@@ -5,7 +5,7 @@ import 'package:module_app/presentation/controllers/controllers.dart';
 class SecondPage extends StatelessWidget {
   SecondPage({super.key});
 
-  final controller = Get.put(CountController());
+  final controller = Get.find<CountController>();
 
   @override
   Widget build(BuildContext context) {

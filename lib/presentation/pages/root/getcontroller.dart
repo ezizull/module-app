@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:module_app/presentation/pages/pages.dart';
 
 class RootPage extends StatelessWidget {
   const RootPage({super.key});
@@ -20,21 +19,21 @@ class RootPage extends StatelessWidget {
             SizedBox(
               width: 120,
               child: ElevatedButton(
-                onPressed: () => Get.to(SecondPage()),
+                onPressed: () => Get.toNamed("/second"),
                 child: const Text("Get.put"),
               ),
             ),
             SizedBox(
               width: 120,
               child: ElevatedButton(
-                onPressed: () => Get.to(ThirdPage()),
+                onPressed: () => Get.toNamed("/third"),
                 child: const Text("Get.lazyPut"),
               ),
             ),
             SizedBox(
               width: 120,
               child: ElevatedButton(
-                onPressed: () => Get.to(FourthPage()),
+                onPressed: () => Get.toNamed("/fourth"),
                 child: const Text("Get.putAsync"),
               ),
             ),

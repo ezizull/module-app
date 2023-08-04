@@ -4,9 +4,9 @@ class CountController extends GetxController {
   final count = 0.obs;
 
   Future<CountController> init() async {
-    const duration = Duration(seconds: 5);
+    const duration = Duration(seconds: 1);
 
-    Future.delayed(duration, () {
+    await Future.delayed(duration, () {
       count.value++;
       print("CountController:: Future init ${count.value}");
       return;

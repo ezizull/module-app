@@ -2,27 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:module_app/presentation/controllers/controllers.dart';
 
-class FourthPage extends StatefulWidget {
-  const FourthPage({super.key});
+class FourthPage extends StatelessWidget {
+  FourthPage({super.key});
 
-  @override
-  State<FourthPage> createState() => _FourthPageState();
-}
-
-class _FourthPageState extends State<FourthPage> {
-  CountController controller = CountController();
-
-  @override
-  initState() {
-    super.initState();
-    asyncFunc();
-  }
-
-  void asyncFunc() async {
-    controller = await Get.putAsync(() => CountController().init());
-    print("FourthPage:: $controller");
-    setState(() {});
-  }
+  final controller = Get.find<CountController>();
 
   @override
   Widget build(BuildContext context) {
