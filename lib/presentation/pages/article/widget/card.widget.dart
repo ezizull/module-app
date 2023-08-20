@@ -28,10 +28,11 @@ class CardArticle extends StatelessWidget {
           article.title,
         ),
         subtitle: Text(article.author ?? ''),
-        onTap: () => Navigator.pushNamed(
+        onTap: () => Navigator.push(
           context,
-          ArticleDetailPage.routeName,
-          arguments: article,
+          MaterialPageRoute(builder: (context) {
+            return ArticleDetailPage(article: article);
+          }),
         ),
       ),
     );
