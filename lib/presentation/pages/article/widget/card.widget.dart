@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:module_app/internal/models/models.dart';
 
-import 'article_detail.widget.dart';
+import '../article_detail.dart';
 
 class CardArticle extends StatelessWidget {
   final Article article;

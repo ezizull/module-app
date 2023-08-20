@@ -30,7 +30,7 @@ class Main extends StatelessWidget {
         GetPage(
           name: "/",
           page: () => ArticlePage(),
-          binding: RootBinding(),
+          binding: ArticleBinding(),
         ),
       ],
       theme: ThemeData.light(),

@@ -1,5 +1,5 @@
 // root
-export 'root/root.dart';
+export 'article/article.dart';
 
 // other
 export 'notfound/notfound.dart';
