@@ -11,8 +11,10 @@ dependencies:
 
   # state management
   get: 4.6.5
-  # storage
-  get_storage: 2.1.1
+  # htp
+  http: 1.1.0
+  # dio
+  dio: 5.3.2
 
   cupertino_icons: ^1.0.2
   

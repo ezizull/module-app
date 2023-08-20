@@ -2,17 +2,11 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:module_app/presentation/bindings/bindings.dart';
-import 'package:module_app/presentation/controllers/controllers.dart';
-import 'package:module_app/presentation/middlewares/middlewares.dart';
 
 import 'package:module_app/presentation/pages/pages.dart';
-import 'package:module_app/presentation/services/services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  await Get.putAsync(() => CountController().init());
-  await Get.putAsync(() => StorageService().init());
 
   runApp(const Main());
 }
@@ -35,25 +29,8 @@ class Main extends StatelessWidget {
         // root
         GetPage(
           name: "/",
-          page: () => const RootPage(),
-          binding: ViewBinding(),
-        ),
-
-        // other
-        GetPage(
-          name: "/second",
-          page: () => SecondPage(),
-          binding: CountBinding(),
-          middlewares: [SessionMiddleware()],
-        ),
-        GetPage(
-          name: "/third",
-          page: () => ThirdPage(),
-          binding: LazyCountBinding(),
-        ),
-        GetPage(
-          name: "/fourth",
-          page: () => FourthPage(),
+          page: () => ArticlePage(),
+          binding: RootBinding(),
         ),
       ],
       theme: ThemeData.light(),
