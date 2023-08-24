@@ -1,2 +1,2 @@
 // binding
-export 'article.binding.dart';
+export 'root.binding.dart';

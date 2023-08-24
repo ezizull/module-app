@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:module_app/presentation/bindings/bindings.dart';
 
+import 'package:module_app/presentation/bindings/bindings.dart';
 import 'package:module_app/presentation/pages/pages.dart';
 
 void main() async {
@@ -29,8 +29,8 @@ class Main extends StatelessWidget {
         // root
         GetPage(
           name: "/",
-          page: () => ArticlePage(),
-          binding: ArticleBinding(),
+          page: () => const RootPage(),
+          binding: RootBinding(),
         ),
       ],
       theme: ThemeData.light(),
