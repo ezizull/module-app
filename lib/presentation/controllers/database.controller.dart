@@ -17,7 +17,7 @@ class DatabaseController extends ClientController {
 
   Future storeUserName() async {
     try {
-      final database = await databases!.createDocument(
+      final result = await databases!.createDocument(
         databaseId: "YOUR_DATABASE_ID",
         documentId: ID.unique(),
         collectionId: "YOUR_COLLECTION_ID",
@@ -30,7 +30,7 @@ class DatabaseController extends ClientController {
           Permission.delete(Role.user("USERID")),
         ],
       );
-      print("DatabaseController:: singIn $database");
+      print("DatabaseController:: storeUserName $result");
     } catch (error) {
       Get.defaultDialog(
         title: "Error Database",
