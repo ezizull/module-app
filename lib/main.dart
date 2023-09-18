@@ -33,7 +33,8 @@ class Main extends StatelessWidget {
 
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: _authController.isLoggedIn.value ? '/' : '/login',
+      // initialRoute: _authController.isLoggedIn.value ? '/' : '/login',
+      initialRoute: '/',
       unknownRoute: GetPage(
         name: "/notfound",
         page: () => const NotFoundPage(),
