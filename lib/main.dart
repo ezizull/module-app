@@ -1,18 +1,31 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:module_app/firebase_options.dart';
 import 'package:module_app/presentation/bindings/bindings.dart';
+import 'package:module_app/presentation/controllers/auth.controller.dart';
+import 'package:module_app/presentation/controllers/messaging_controller.dart';
+import 'package:module_app/presentation/pages/login/login.dart';
 
 import 'package:module_app/presentation/pages/pages.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await Get.putAsync(() async => await SharedPreferences.getInstance());
+  await MessagingController().initPushNotification();
+  await MessagingController().initLocalNotification();
 
-  runApp(const Main());
+  runApp(Main());
 }
 
 class Main extends StatelessWidget {
-  const Main({super.key});
+  Main({super.key});
+  final _authController = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +33,7 @@ class Main extends StatelessWidget {
 
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/",
+      initialRoute: _authController.isLoggedIn.value ? '/' : '/login',
       unknownRoute: GetPage(
         name: "/notfound",
         page: () => const NotFoundPage(),
@@ -31,6 +44,16 @@ class Main extends StatelessWidget {
           name: "/",
           page: () => ArticlePage(),
           binding: ArticleBinding(),
+        ),
+        GetPage(
+          name: "/login",
+          page: () => LoginPage(),
+          binding: AuthBinding(),
+        ),
+        GetPage(
+          name: "/register",
+          page: () => RegisterPage(),
+          binding: AuthBinding(),
         ),
       ],
       theme: ThemeData.light(),

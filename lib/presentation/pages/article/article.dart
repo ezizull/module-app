@@ -9,11 +9,23 @@ class ArticlePage extends StatelessWidget {
   final httpController = Get.find<HttpController>();
   final getConnectController = Get.find<GetConnectController>();
 
+  final _authController = Get.put(AuthController());
+
   ArticlePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('My Home'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                _authController.logout();
+              },
+              icon: const Icon(Icons.exit_to_app))
+        ],
+      ),
       body: Column(
         children: [
           Obx(() {

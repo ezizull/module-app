@@ -8,5 +8,6 @@ class ArticleBinding extends Bindings {
     Get.put(HttpController());
     Get.put(DioController());
     Get.put(GetConnectController());
+    Get.put(AuthController());
   }
 }
