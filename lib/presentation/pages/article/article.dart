@@ -5,9 +5,12 @@ import 'package:module_app/presentation/controllers/controllers.dart';
 import 'widget/card.widget.dart';
 
 class ArticlePage extends StatelessWidget {
-  final dioController = Get.find<DioController>();
-  final httpController = Get.find<HttpController>();
-  final getConnectController = Get.find<GetConnectController>();
+  // final dioController = Get.find<DioController>();
+  final dioController = Get.put(DioController());
+  // final httpController = Get.find<HttpController>();
+  final httpController = Get.put(HttpController());
+  // final getConnectController = Get.find<GetConnectController>();
+  final getConnectController = Get.put(GetConnectController());
 
   final _authController = Get.put(AuthController());
 
